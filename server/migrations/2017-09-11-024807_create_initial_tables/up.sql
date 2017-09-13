@@ -1,0 +1,50 @@
+-- Your SQL goes here
+
+CREATE TABLE "user" (
+    id SERIAL PRIMARY KEY,
+    email VARCHAR NOT NULL
+);
+
+CREATE TABLE project (
+    id SERIAL PRIMARY KEY,
+    date_created TIMESTAMP WITH TIME ZONE NOT NULL,
+    date_modified TIMESTAMP WITH TIME ZONE NOT NULL,
+    date_completed TIMESTAMP WITH TIME ZONE NULL,
+    name VARCHAR NOT NULL
+);
+
+CREATE TABLE task (
+    id SERIAL PRIMARY KEY,
+    project_id INTEGER NOT NULL,
+    date_created TIMESTAMP WITH TIME ZONE NOT NULL,
+    date_modified TIMESTAMP WITH TIME ZONE NOT NULL,
+    date_completed TIMESTAMP WITH TIME ZONE NULL,
+    name VARCHAR NOT NULL
+);
+
+CREATE TABLE tag (
+    id SERIAL PRIMARY KEY,
+    date_created TIMESTAMP WITH TIME ZONE NOT NULL,
+    date_modified TIMESTAMP WITH TIME ZONE NOT NULL,
+    name VARCHAR NOT NULL
+);
+
+CREATE TABLE task_tag (
+    id SERIAL PRIMARY KEY,
+    tag_id INTEGER NOT NULL,
+    task_id INTEGER NOT NULL
+);
+
+CREATE TABLE project_tag (
+    id SERIAL PRIMARY KEY,
+    tag_id INTEGER NOT NULL,
+    project_id INTEGER NOT NULL
+);
+
+CREATE TABLE task_time (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL,
+    task_id INTEGER NOT NULL,
+    start_time TIMESTAMP WITH TIME ZONE DEFAULT NOW() NOT NULL,
+    end_time TIMESTAMP WITH TIME ZONE NULL
+);

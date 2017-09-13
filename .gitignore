@@ -1,0 +1,4 @@
+**/*.rs.bk
+/client/node_modules
+.env
+/server/target

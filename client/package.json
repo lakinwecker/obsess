@@ -1,0 +1,32 @@
+{
+  "name": "obsess",
+  "version": "0.0.1",
+  "description": "A simple time tracking app",
+  "main": "src/index.ts",
+  "repository": "https://github.com/lakinwecker/obsess",
+  "author": "Lakin Wecker <lakin@structuredabstraction.com>",
+  "license": "AGPL-1.0",
+  "dependencies": {
+    "abyssa": "^8.0.6",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2016": "^6.24.1",
+    "bulma": "^0.5.1",
+    "css-loader": "^0.28.7",
+    "es2016": "^0.0.0",
+    "file-loader": "^0.11.2",
+    "immupdate": "^1.1.4",
+    "kaiju": "^0.27.2",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "snabbdom": "^0.7.0",
+    "space-lift": "^0.5.0",
+    "style-loader": "^0.18.2",
+    "ts-loader": "^2.3.7",
+    "typescript": "^2.5.2",
+    "webpack": "^3.5.6"
+  },
+  "scripts": {
+    "watch": "webpack --progress --colors --watch"
+  }
+}
